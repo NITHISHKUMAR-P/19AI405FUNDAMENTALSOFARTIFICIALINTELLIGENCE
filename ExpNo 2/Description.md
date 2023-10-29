@@ -7,9 +7,9 @@ Breadth-First Traversal (or Search) for a graph is like the Breadth-First Traver
 The only catch here is that, unlike trees, graphs may contain cycles so that we may come to the same node again. To avoid processing a node more than once, we divide the vertices into two categories:
 <ol><li>Visited</li>
 <li>Not Visited</li></ol>
-</p>
-<p>A Boolean visited array is used to mark the visited vertices. For simplicity, it is assumed that all vertices are reachable from the starting vertex. BFS uses a queue data structure for traversal.</p>
-<strong>How does BFS work?</strong><br>
+
+A Boolean visited array is used to mark the visited vertices. For simplicity, it is assumed that all vertices are reachable from the starting vertex. BFS uses a queue data structure for traversal.</br>
+<strong>How does BFS work?</strong></br>
 Starting from the root, all the nodes at a particular level are visited first, and then the next level nodes are traversed until all the nodes are visited.
 To do this, a queue is used. All the adjacent unvisited nodes of the current level are pushed into the queue, and the current-level nodes are marked visited and popped from the queue.
 ## Illustration:
@@ -61,10 +61,13 @@ Now, Queue becomes empty, So, terminate these process of iteration.
 <li>Iterate steps 4 and 5 until all nodes get visited, and there are no more unvisited nodes.</li>
 
 </ol>
+
 ## Program:
+
 Developed By : **Nithishkumar P**
 </br>
 Register No. : **212221230070**
+
 ```py
 from collections import deque
 from collections import defaultdict
@@ -112,39 +115,14 @@ visited = defaultdict(bool)
 traversedpath = bfs(graph,start,visited,path)
 print(traversedpath)
 ```
-### Sample Input
-
-7 9 <BR>
-A B <BR>
-A C <BR>
-A F <BR>
-C E <BR>
-C F <BR>
-C D <BR>
-D E <BR>
-D G <BR>
-G F <BR>
-<hr>
-<h3>Sample Output</h3>
-<hr>
-['A', 'B', 'C', 'F', 'E', 'D', 'G']
-
-<hr>
-
-<hr>
-<h3>Sample Input</h3>
-<hr>
-5 6 <BR>
-0 1 <BR>
-0 2 <BR>
-1 2 <BR>
-1 3 <BR>
-2 4 <BR>
-3 4 <BR>
-<hr>
-<h3>Sample Output</h3>
-<hr>
-['0', '1', '2', '3', '4']
-<hr>
+## Output:
+### Input 1:
+![image](https://github.com/NITHISHKUMAR-P/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/93427017/7dcc4ca8-8e86-4c0c-bcf7-ca106a606e29)
+### Output 1:
+![image](https://github.com/NITHISHKUMAR-P/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/93427017/93c30730-fa73-41f6-a8b5-a47d9f96e075)
+### Input 2:
+![image](https://github.com/NITHISHKUMAR-P/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/93427017/d53260e7-6103-4ba9-85c5-c2f08de5c3f0)
+### Output 2:
+![image](https://github.com/NITHISHKUMAR-P/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/93427017/676abb57-94c3-4ae1-ac59-c4d4a51246b3)
 ## Result:
-Thus,a Graph was constructed and implementation of Breadth First Search for the same graph was done successfully.
+Thus, a Graph was constructed and implementation of Breadth First Search for the same graph was done successfully.
